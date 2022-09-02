@@ -1,0 +1,27 @@
+body {
+   font-family: 'Cardo', serif;
+}
+
+.container {
+   background-color: #cccccc;
+}
+
+
+
+.container1 {
+   background-image: url("https://i.pinimg.com/originals/24/ac/45/24ac45f68e31477d9de1ea3568de6d7a.jpg");
+   background-color: #cccccc;
+}
+
+.title {
+   color: #0c0b2b;
+}
+
+#link {
+
+   color: rgb(134, 190, 207)
+}
+
+h1{
+   color:violet ;
+}
