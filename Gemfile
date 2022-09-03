@@ -72,3 +72,5 @@ group :test do
 end
 
 gem "ruby-lsp", "~> 0.2.3", :group => :development
+
+gem "tailwindcss-rails", "~> 2.0"
