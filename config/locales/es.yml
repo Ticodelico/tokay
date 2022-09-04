@@ -21,6 +21,7 @@ es:
   common:
     confirm: '¿Estás seguro?'
     back: 'Volver'
+    submit: 'Guardar'
   shared:
     header:
       add: 'Añadir producto'

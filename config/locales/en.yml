@@ -21,6 +21,8 @@ en:
   common:
     confirm: 'Are you sure?'
     back: 'Go back'
+    submit: 'Save changes'
+
   shared:
     header:
       add: 'Add product'
