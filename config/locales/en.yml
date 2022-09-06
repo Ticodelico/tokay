@@ -21,8 +21,6 @@ en:
   common:
     confirm: 'Are you sure?'
     back: 'Go back'
-    submit: 'Save changes'
-
   shared:
     header:
       add: 'Add product'
@@ -33,7 +31,10 @@ en:
       title: 'Add product'
     index:
       title: 'Products:'
-    all: 'All'
+      all: 'All'
+      min_price: 'Min price'
+      max_price: 'Max price'
+      query_text: 'What do you want to search?'
     show:
       edit: 'Edit product'
       delete: 'Delete product'

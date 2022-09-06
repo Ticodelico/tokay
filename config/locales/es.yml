@@ -21,7 +21,6 @@ es:
   common:
     confirm: '¿Estás seguro?'
     back: 'Volver'
-    submit: 'Guardar'
   shared:
     header:
       add: 'Añadir producto'
@@ -32,8 +31,10 @@ es:
       title: 'Añadir producto'
     index:
       title: 'Productos:'
-    all: 'Todos'
-
+      all: 'Todos'
+      min_price: 'Precio mínimo'
+      max_price: 'Precio máximo'
+      query_text: '¿Qué quieres buscar?'
     show:
       edit: 'Editar producto'
       delete: 'Borrar producto'
