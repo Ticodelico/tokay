@@ -7,9 +7,6 @@
 #   Character.create(name: "Luke", movie: movies.first)
 Category.create(name: 'Consolas')
 Category.create(name: 'Laptops')
-Category.create(name: 'Computadoras')
+Category.create(name: 'Ropa')
 Category.create(name: 'Celulares')
-Category.create(name: 'Televisores')
-
-
-
+Category.create(name: 'Relojes')
