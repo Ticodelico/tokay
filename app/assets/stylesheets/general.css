@@ -1,0 +1,31 @@
+.gato {
+	background-color: red;
+	width: 120px;
+	padding: 33px;
+	margin: 20px;
+}
+.perro{
+	background-color: green;
+	width: 133px;
+	padding: 33px;
+	margin: 20px;
+}
+.elefante{
+	background-color: blue;
+	width: 140px;
+	padding: 25px;
+	margin: 20px;
+}
+
+.flex-container{
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+  
+}
+
+.center{
+  justify-content: center;
+  align-items: center;
+}

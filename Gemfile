@@ -28,7 +28,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
+gem "redis", "~> 4.0"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -50,6 +50,15 @@ gem "pg_search", "~> 2.3"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+
+
+gem "ruby-lsp", "~> 0.2.3", :group => :development
+
+# Tailwind
+gem "tailwindcss-rails", "~> 2.0"
+
+# Pagination
+gem "pagy", "~> 5.10"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -74,8 +83,5 @@ group :test do
   gem "webdrivers"
 end
 
-gem "ruby-lsp", "~> 0.2.3", :group => :development
-
-gem "tailwindcss-rails", "~> 2.0"
 
 
