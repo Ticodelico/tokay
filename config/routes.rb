@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+  namespace :authentication, path: '', as: '' do
+    resources :users, only: [:new, :create], path: '/register', path_names: { new: '/' }
+    resources :sessions, only: [:new, :create, :destroy], path: '/login', path_names: { new: '/' }
+
+  end
   get 'pages/index'
   get 'pages/faq'
   get 'pages/contact'
@@ -6,6 +12,6 @@ Rails.application.routes.draw do
   get 'pages/blog'
   get 'pages/about'
   resources :categories, except: :show
-  resources :products
+  resources :products, path: '/'
   root "products#index"
 end

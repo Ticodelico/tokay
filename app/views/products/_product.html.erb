@@ -1,5 +1,20 @@
+
+<div class="max-w-sm rounded overflow-hidden shadow-lg box flex flex-col" >
 <%= link_to product_path(product), class: 'product m-3', 'data-turbo-frame': '_top' do %>
-    <%= image_tag product.photo, width: 200 if product.photo.attached? %>
-    <h2><%= product.title %></h2>
-    <span><%= product.price %>$</span>
+    <div class=" w-full ">
+        <% if product.photo.attached? %>
+            <%= image_tag product.photo, width: 200 if product.photo.attached? %>
+        <% else%>
+            <%= image_tag 'default.jpeg', width: 200, height: 200%>
+        <% end%>
+        <h2 class="text-center font-semibold  text-blue-800    "><%= product.title %></h2>
+        <p class="" style="font-size: 16px;"><%= product.description %></p>
+    </div>
+         <div class="p-10 mt-auto w-full">
+           <span class="font-bold text-blue-900">
+                <%= product.price %>$
+           </span>
+        </div>
+
 <% end %>
+</div>
