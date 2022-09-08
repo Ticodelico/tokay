@@ -19,7 +19,7 @@ module Vendelo
     config.i18n.available_locales = %i[en es]
 
     # lenguage by default
-    config.i18n.default_locale = :es
+    config.i18n.default_locale = :en
 
     # Allow Muti Query
     config.active_record.async_query_executor = :global_thread_pool

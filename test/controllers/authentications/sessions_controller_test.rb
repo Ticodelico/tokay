@@ -2,7 +2,7 @@ require "test_helper"
 
 class Authentication::SessionsControllerTest < ActionDispatch::IntegrationTest
   def setup
-    @user = users(:paco)
+    @user = users(:lilly)
   end
 
   test "should get new" do

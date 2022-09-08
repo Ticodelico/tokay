@@ -18,20 +18,22 @@ es:
               blank: 'no puede estar vacía'
             price:
               blank: 'no puede estar vacío'
-  common:
-    confirm: '¿Estás seguro?'
-    back: 'Volver'
-  shared:
-    header:
-      add: 'Añadir producto'
-      authentication:
-       users:
-      create:
-        created: 'Tu cuenta se ha creado!'
+  authentication:
     sessions:
       create:
         created: 'Bienvenido!'
         failed: 'Login inválido!'
+    users:
+      create:
+        created: 'Tu cuenta se ha creado!'
+  common:
+    confirm: '¿Estás seguro?'
+    back: 'Volver'
+    not_logged_in: 'Tienes que hacer login o crearte una cuenta'
+  shared:
+    header:
+      add: 'Añadir producto'
+      
   products:
     edit:
       title: 'Editar producto'
