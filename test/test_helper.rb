@@ -5,11 +5,11 @@ require "rails/test_help"
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
   parallelize(workers: :number_of_processors)
-
+  
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
   def login
-    post sessions_path, params: { login: 'paco@vendelo.com', password: 'testme' }
+    post sessions_path, params: { login: 'lilly@vendelo.com', password: 'testme' }
   end
 end

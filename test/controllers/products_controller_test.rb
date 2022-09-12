@@ -51,7 +51,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_select '.product', 12
     assert_select '.products .product:first-child h2', 'El hobbit'
   end
-
+  
   test 'render a detailed product page' do
     get product_path(products(:ps4))
 
@@ -79,7 +79,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     }
 
     assert_redirected_to products_path
-    assert_equal flash[:notice], 'Tu producto se ha creado correctamente'
+    assert_equal flash[:notice], 'Your product has been successfully created'
   end
 
   test 'does not allow to create a new product with empty fields' do
@@ -109,7 +109,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     }
 
     assert_redirected_to products_path
-    assert_equal flash[:notice], 'Tu producto se ha actualizado correctamente'
+    assert_equal flash[:notice], 'Your product has been successfully updated'
   end
 
   test 'does not allow to update a product with an invalid field' do
@@ -128,6 +128,6 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to products_path
-    assert_equal flash[:notice], 'Tu producto se ha eliminado correctamente'
+    assert_equal flash[:notice], 'Your product has been successfully destroyed'
   end
 end
