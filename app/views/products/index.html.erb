@@ -13,7 +13,9 @@
   <%= render partial: 'category', collection: @categories %>
 
   <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products' do %>
+      <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-5 ">
       <%= render partial: 'product', collection: @products %>
+      </div>
       <% if @pagy.next %>
       <% end %>
       <%= turbo_frame_tag "products-#{@pagy.next}", class: 'products', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>

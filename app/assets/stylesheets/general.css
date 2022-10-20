@@ -4,38 +4,46 @@
 	padding: 33px;
 	margin: 20px;
 }
-.perro{
+
+.perro {
 	background-color: green;
 	width: 133px;
 	padding: 33px;
 	margin: 20px;
 }
-.elefante{
+
+.elefante {
 	background-color: blue;
 	width: 140px;
 	padding: 25px;
 	margin: 20px;
 }
 
-.flex-container{
-  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-  display: -ms-flexbox;  /* TWEENER - IE 10 */
-  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-  
+.flex-container {
+	display: -webkit-box;
+	/* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -ms-flexbox;
+	/* TWEENER - IE 10 */
+	display: -webkit-flex;
+	/* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+	display: flex;
+	/* NEW, Spec - Firefox, Chrome, Opera */
+	align-content: center;
+
 }
 
-.center{
-  justify-content: center;
-  align-items: center;
+.center {
+	justify-content: center;
+	align-items: center;
 }
-.box{
+
+.box {
 	height: 425px;
-	width: 250px; 
+	width: 250px;
 	padding: 15px 15px 5px 15px;
 }
 
-.box img{
+.box img {
 	margin: 0px auto;
 	max-height: 300px;
 	max-width: 250px;
