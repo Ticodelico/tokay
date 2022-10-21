@@ -8,30 +8,14 @@
           py-4
           md:py-0
           px-4
-          text-lg text-gray-700
-        dark:bg-gray-800 
+          text-lg text-gray-800
+        dark:bg-gray-900 
         "
       >
        <div> <%=link_to products_path, class: "text-fuchsia-50 hover:text-fuchsia-400" do%>
-        <h1><%=t('Sex shop')%></h1>
+        <h1>Sex Shop</h1>
         <% end %>
         </div>
-       
-         <svg
-            xmlns="http://www.w3.org/2000/svg"
-            id="menu-button"
-            class="h-6 w-6 cursor-pointer md:hidden block"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
        
        <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
           <ul
@@ -43,13 +27,28 @@
               md:pt-0"
           >
             <li>
-            <%= link_to t('.add'), new_product_path, class: "md:p-4 py-2 block hover:text-fuchsia-400 text-fuchsia-600"%>
+              <%= link_to t('.add'), new_product_path, class: "md:p-4 py-2 block hover:text-fuchsia-400 text-fuchsia-600", data: { turbo_frame: "modal" } if Current.user %>
             </li>
             <li>
-            <%= link_to t('.categories'), categories_path, class: "md:p-4 py-2 block hover:text-fuchsia-400 text-fuchsia-600"%>
+            <%= link_to t('.categories'), categories_path, class: "md:p-4 py-2 block hover:text-fuchsia-400 text-fuchsia-600" if Current.user %>
             </li>
+            <li>
+            <%= link_to t('.login'), new_session_path, class: "md:p-4 py-2 block hover:text-fuchsia-400 text-fuchsia-600" unless Current.user %>
+            </li>
+            <li>
+            <%= link_to t('.register'), new_user_path, class: "md:p-4 py-2 block hover:text-fuchsia-400 text-fuchsia-600" unless Current.user %>
+            </li>
+            <li>
+              <%= link_to t('.logout'), session_path(Current.user.id), data: {
+              turbo_method: :delete,
+              turbo_confirm: t('common.confirm')
+            }, class: "md:p-4 py-2 block hover:text-sky-800 text-sky-400" if Current.user %>
+            </li>
+
           </ul>
         </div>
     </nav>
   </header>
   
+
+

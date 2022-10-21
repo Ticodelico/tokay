@@ -10,11 +10,21 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="dark:bg-gray-700 ">
-  
+  <body>
     <%= render 'shared/flash' %>
+
+  <% if current_page?(new_session_path) ||  current_page?(new_user_path) %>
+  <div  class="dark:bg-gray-900 ">
+     <%= render 'shared/login_header' %>
+    <%= yield %>
+  </div>
+  <% else %>
+    <div  class="bg-white ">
+   <%= render partial: 'products/search'%>
     <%= render 'shared/header' %>
     <%= yield %>
+      </div>
+  <% end %>
   </body>
 </html>
 
