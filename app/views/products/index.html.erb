@@ -1,6 +1,9 @@
 <%= turbo_frame_tag 'home' do %>
-  <%= link_to t('.all'), products_path %>
-  <%= render partial: 'category', collection: @categories %>
+  <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 ">
+    <ul class="flex flex-wrap text-sm font-medium text-center text-gray-800 border-b border-gray-200 dark:border-gray-700">
+       <%= render partial: 'category', collection: @categories %>
+    </ul>
+   </div>
   <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products' do %>
       <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-5 ">
       <%= render partial: 'product', collection: @products %>

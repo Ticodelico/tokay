@@ -1,3 +1,5 @@
-<%= link_to products_path(category_id: category.id), class: 'category' do %>
-  <%= category.name %>
-<% end %>
+<li class="mr-2">
+  <%= link_to products_path(category_id: category.id), class: 'inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-fuchsia-400 dark:hover:text-fuchsia-600' do %>
+    <%= category.name %>
+  <% end %>
+</li>

@@ -14,7 +14,7 @@
     <%= render 'shared/flash' %>
 
   <% if current_page?(new_session_path) ||  current_page?(new_user_path) %>
-  <div  class="dark:bg-gray-900 ">
+  <div  class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  ">
      <%= render 'shared/login_header' %>
     <%= yield %>
   </div>
