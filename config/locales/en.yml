@@ -2,6 +2,8 @@ en:
   activerecord:
     models:
       product: Product
+      user: User
+      category: Category
     attributes:
       product:
         title: 'Title'
@@ -18,6 +20,10 @@ en:
               blank: "can't be blank"
             price:
               blank: "can't be blank"
+  authentication:
+    sessions:
+      destroy:
+        destroyed: 'Session ended. Bye!'
   common:
     confirm: 'Are you sure?'
     back: 'Go back'

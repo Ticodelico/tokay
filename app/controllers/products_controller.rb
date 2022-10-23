@@ -15,13 +15,15 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Current.user.products.new(product_params)
+   @product = Product.new(product_params)
+
     if @product.save
       redirect_to products_path, notice: t(".created")
     else
       render :new, status: :unprocessable_entity
     end
   end
+  
   def edit
     product
   end
@@ -48,6 +50,11 @@ class ProductsController < ApplicationController
       :category_id
     )
   end
+
+  def product_params_index
+    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page)
+  end
+
   def product
     @product = Product.find(params[:id])
   end
