@@ -21,7 +21,6 @@ ORDER_BY = {
   belongs_to :user, default: -> { Current.user }
 
   def owner?
-    user_id == Current&.user&.id
+    user_id == Current.user&.id
   end
-
 end

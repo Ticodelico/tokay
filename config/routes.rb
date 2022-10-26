@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'pages/home'
   get 'pages/blog'
   get 'pages/about'
+  resources :users, only: :show, path: '/user', param: :username
   resources :categories, except: :show
   resources :products, path: '/'
   root "products#index"
