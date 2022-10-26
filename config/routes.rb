@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'favorites/create'
 
   namespace :authentication, path: '', as: '' do
     resources :users, only: [:new, :create], path: '/register', path_names: { new: '/' }
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   get 'pages/home'
   get 'pages/blog'
   get 'pages/about'
+  resources :favorites, only: :create
   resources :users, only: :show, path: '/user', param: :username
   resources :categories, except: :show
   resources :products, path: '/'
