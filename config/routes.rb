@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'pages/home'
   get 'pages/blog'
   get 'pages/about'
-  resources :favorites, only: :create
+  resources :favorites, only: [:index, :create, :destroy], param: :product_id
   resources :users, only: :show, path: '/user', param: :username
   resources :categories, except: :show
   resources :products, path: '/'

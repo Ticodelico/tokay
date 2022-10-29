@@ -34,6 +34,9 @@
             
             </li>
             <li>
+            <%= link_to t('.favorites'), favorites_path, class: "md:p-4 py-2 block hover:text-white-400 text-white" if Current.user%>
+            </li>
+            <li>
             <%= link_to t('.login'), new_session_path, class: "md:p-4 py-2 block hover:text-grey-400 text-white" unless Current.user %>
             </li>
             <li>
