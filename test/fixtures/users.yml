@@ -1,17 +1,22 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 lilly:
-  email: lilly@vendelo.com
+  email: admin@tokay.com
+  username: admin
+  password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
+
+lilly:
+  email: lilly@tokay.com
   username: lilly
   password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
 
 niyo:
-  email: niyo@vendelo.com
+  email: niyo@tokay.com
   username: niyo
   password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
   admin: true
 
 pepe:
-  email: pepe@vendelo.com
+  email: pepe@tokay.com
   username: pepito
   password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>

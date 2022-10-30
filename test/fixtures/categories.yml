@@ -1,28 +1,23 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-videogames:
-  name: Videojuegos
+desayunos:
+  name: desayunos
+  menu: tomatos
 
-computers:
-  name: Informática
+general:
+  name: general
+  menu: tomatos
 
-clothes:
-  name: Ropa
 
-cars:
-  name: Coches
+entradas:
+  name: entradas
+  menu: tomatos
 
-music:
-  name: Música
+postres:
+  name: postres
+  menu: tomatos
 
-electronic:
-  name: Electrónica
 
-books:
-  name: Libros
-
-mobile:
-  name: Móviles
-
-sports:
-  name: Deportes
+general:
+  name: general
+  menu: jelous
