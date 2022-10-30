@@ -3,7 +3,7 @@ class RestaurantsController < ApplicationController
 
   # GET /restaurants or /restaurants.json
   def index
-    @restaurants = Restaurant.all
+    @pagy, @restaurants = pagy_countless(FindRestaurants.new.call(params),items: 12)
   end
 
   # GET /restaurants/1 or /restaurants/1.json
