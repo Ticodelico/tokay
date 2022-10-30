@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_30_043043) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_30_040000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,21 +42,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_30_043043) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "brands", force: :cascade do |t|
-    t.string "primary_color"
-    t.string "secundary_color"
-    t.string "slogan"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "menu_id", null: false
-    t.index ["menu_id"], name: "index_brands_on_menu_id"
-  end
-
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "menu_id", null: false
+    t.bigint "menu_id"
     t.index ["menu_id"], name: "index_categories_on_menu_id"
   end
 
@@ -71,9 +61,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_30_043043) do
   end
 
   create_table "menus", force: :cascade do |t|
+    t.string "primary_color"
+    t.string "secundary_color"
+    t.string "slogan"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "restaurant_id", null: false
+    t.bigint "restaurant_id"
     t.index ["restaurant_id"], name: "index_menus_on_restaurant_id"
   end
 
@@ -124,7 +117,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_30_043043) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "brands", "menus"
   add_foreign_key "categories", "menus"
   add_foreign_key "favorites", "products"
   add_foreign_key "favorites", "users"

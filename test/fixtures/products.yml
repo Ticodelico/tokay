@@ -3,46 +3,47 @@ salchipapas:
   title: Salchipapas
   description: Papas, salchichas, salsa de tomate y mayonesa.
   category: general
+  price: 1500
   user: admin
   
 papicarne:
   title: Papicarne
   description: Papas, Carne, Salsa de Tomate y Mayonesa.
   category: general
+  price: 1500
   user: admin
 
 nachos:
   title: Nachos
   description: Tortillas, Frijoles, Carne Mechada, Chimichurri, Salsa De Tomate, Mayoneas y Salsa de queso.
   category: general
-  user: admin
-
-nachos:
-  title: Nachos
-  description: Tortillas, Frijoles, Carne Mechada, Chimichurri, Salsa De Tomate, Mayoneas y Salsa de queso.
-  category: general
+  price: 1500
   user: admin
 
 patacones:
   title: Patacones Especiales
   description: 5 Unidades, Frijoles, Carne Mechada, Chimichurri, Salsa De Tomate, Mayoneas y Salsa de queso.
   category: general
+  price: 1500
   user: admin
 
 hamburguesa:
   title: Hamburguesa Sencilla
   description: Torta,  lechuga, Tomate, Salsa De Tomate, Mayonesa y Salsa de queso
   category: general
+  price: 1500
   user: admin
 
 galloPintoEnSalsa:
   title: Gallo Pinto con Carne en Salsa
-  description: 
+  description: Gallo Pinto con Carne en Salsa, huevo, natilla
+  price: 1500
   category: desayunos
   user: admin
 
-  galloPinto:
+galloPinto:
   title: Gallo Pinto 
   description: Lengua, Chuleta, Bistec, Filet de Pollo
   category: desayunos
+  price: 1500
   user: admin

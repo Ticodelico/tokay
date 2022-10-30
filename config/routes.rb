@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       resources :menus
       resources :favorites
       resources :categories
-      resources :brands
+      resources :suscriptions
 
       root to: "users#index"
     end

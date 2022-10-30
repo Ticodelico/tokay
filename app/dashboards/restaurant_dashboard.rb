@@ -15,6 +15,7 @@ class RestaurantDashboard < Administrate::BaseDashboard
     facebook_site: Field::String,
     name: Field::String,
     reception_number: Field::String,
+    suscription_id: Field::Number,
     web_site: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -42,6 +43,7 @@ class RestaurantDashboard < Administrate::BaseDashboard
     facebook_site
     name
     reception_number
+    suscription_id
     web_site
     created_at
     updated_at
@@ -57,6 +59,7 @@ class RestaurantDashboard < Administrate::BaseDashboard
     facebook_site
     name
     reception_number
+    suscription_id
     web_site
   ].freeze
 

@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class BrandDashboard < Administrate::BaseDashboard
+class SuscriptionDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -9,9 +9,10 @@ class BrandDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    primary_color: Field::String,
-    secundary_color: Field::String,
-    slogan: Field::String,
+    limit: Field::Number,
+    name: Field::Select.with_options(searchable: false, collection: ->(field) { field.resource.class.send(field.attribute.to_s.pluralize).keys }),
+    price: Field::String,
+    restaurants: Field::HasMany,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -23,18 +24,19 @@ class BrandDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     id
-    primary_color
-    secundary_color
-    slogan
+    limit
+    name
+    price
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     id
-    primary_color
-    secundary_color
-    slogan
+    limit
+    name
+    price
+    restaurants
     created_at
     updated_at
   ].freeze
@@ -43,9 +45,10 @@ class BrandDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    primary_color
-    secundary_color
-    slogan
+    limit
+    name
+    price
+    restaurants
   ].freeze
 
   # COLLECTION_FILTERS
@@ -60,10 +63,10 @@ class BrandDashboard < Administrate::BaseDashboard
   #   }.freeze
   COLLECTION_FILTERS = {}.freeze
 
-  # Overwrite this method to customize how brands are displayed
+  # Overwrite this method to customize how suscriptions are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(brand)
-  #   "Brand ##{brand.id}"
+  # def display_resource(suscription)
+  #   "Suscription ##{suscription.id}"
   # end
 end

@@ -2,22 +2,20 @@
 
 desayunos:
   name: desayunos
-  menu: tomatos
+  menu: tomato_menu
 
 general:
   name: general
-  menu: tomatos
-
+  menu: tomato_menu
 
 entradas:
   name: entradas
-  menu: tomatos
+  menu: tomato_menu
 
 postres:
   name: postres
-  menu: tomatos
-
+  menu: tomato_menu
 
 general:
-  name: general
-  menu: jelous
+  name: tomato_menu
+
