@@ -4,6 +4,7 @@ es:
       product: Producto
       user: Usuario
       category: Categoría
+      admin: Dashboard
     attributes:
       product:
         title: 'Título'

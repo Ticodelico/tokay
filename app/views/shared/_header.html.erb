@@ -27,14 +27,7 @@
               md:pt-0"
           >
             <li>
-              <%= link_to t('.add'), new_product_path, class: "md:p-4 py-2 block hover:text-white-400 text-white", data: { turbo_frame: "modal" } if Current.user %>
-            </li>
-            <li>
-            <%= link_to t('.categories'), categories_path, class: "md:p-4 py-2 block hover:text-white-400 text-white" if Current.user&.admin? %>
-            
-            </li>
-            <li>
-            <%= link_to t('.favorites'), favorites_path, class: "md:p-4 py-2 block hover:text-white-400 text-white" if Current.user%>
+            <%= link_to t('.admin'), admin_restaurants_path, class: "md:p-4 py-2 block hover:text-white-400 text-white" if Current.user&.admin?%>
             </li>
             <li>
             <%= link_to t('.login'), new_session_path, class: "md:p-4 py-2 block hover:text-grey-400 text-white" unless Current.user %>
