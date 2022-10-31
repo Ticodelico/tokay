@@ -1,52 +1,56 @@
-<%= form_with(model: restaurant, class: "contents") do |form| %>
+<%= form_with(model: @restaurant, class: "contents") do |form| %>
   <% if restaurant.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
       <h2><%= pluralize(restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
 
       <ul>
-        <% restaurant.errors.each do |error| %>
+        <% @restaurant.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="my-5">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+<div class="bg-gray-100">
+   <div class="container mx-auto grid">
+        <div role="article" class="bg-gray-100 py-12 md:px-8">
+            <div class="px-6 xl:px-0">
+                <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pb-6 gap-8">
+                   <!--CELL-->  
+                    <div role="cell" class="bg-gray-100">
+                        <div class="container bg-white shadow-2xl rounded-2xl p-5">
+                            <span><img class="bg-gray-200 p-2 mb-5 rounded-full" src="https://i.ibb.co/27R6nk5/home-1.png" alt="home-1" /></span>
+                            <div class="pb-4 text-2xl font-semibold">
+                                  <%= form.label :name %>
+                                  <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+                            </div>
+                            <div class="items-center pb-4 dark:border-gray-700 cursor-pointer w-full ">
+                               <%= form.label :reception_number %>
+                              <%= form.text_field :reception_number, class: "block shadow rounded-md border border-gray-200 outline-none px-3 mt-2 w-full" %>
+                            </div>
+                            <div class="items-center pb-4 dark:border-gray-700 cursor-pointer w-full ">
+                               <%= form.label :contact_number %>
+                                <%= form.text_field :contact_number, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+                            </div>
+                            <div class="items-center pb-4 dark:border-gray-700 cursor-pointer w-full ">
+                               <%= form.label :email %>
+                                <%= form.text_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+                            </div>
+                            <div class="items-center pb-4 dark:border-gray-700 cursor-pointer w-full ">
+                               <%= form.label :facebook_site %>
+                                <%= form.text_field :facebook_site, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+                            </div>
+                            <div class="items-center pb-4 dark:border-gray-700 cursor-pointer w-full ">
+                               <%= form.label :web_site %>
+                                <%= form.text_field :web_site, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+                            </div>
+                             <%= form.button%>
+                        </div>            
+                     </div>    
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
 
-  <div class="my-5">
-    <%= form.label :reception_number %>
-    <%= form.text_field :reception_number, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :contact_number %>
-    <%= form.text_field :contact_number, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :facebook_site %>
-    <%= form.text_field :facebook_site, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :web_site %>
-    <%= form.text_field :web_site, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :active %>
-    <%= form.check_box :active, class: "block mt-2 h-5 w-5" %>
-  </div>
-
-  <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
-  </div>
 <% end %>
