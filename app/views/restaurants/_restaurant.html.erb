@@ -1,8 +1,9 @@
 <%= link_to restaurant, class: 'restaurant', 'data-turbo-frame': '_top' do %>
   <article class="container bg-white shadow-2xl rounded-2xl p-5">
       <h1 class="font-bold text-blue-500"><%= restaurant.name %></h1>
+      <p class="text-md text-gray-300 dark:text-gray-600 text-sm pb-5 "><%= restaurant.suscription.name %></p>
+      <h6 class="  font-bold text-gray-500  "><%= restaurant.email %></h6>
       <p class="font-light text-gray-500 hover:font-bold"><%= restaurant.contact_number %></p>
-      <h6 class="text-sm text-gray-300 mb-5"><%= restaurant.email %></h6>
   </article>
   <!-- END Card component -->
 <% end %>
