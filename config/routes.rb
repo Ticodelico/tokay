@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
   resources :suscriptions
   resources :menus
-  resources :restaurants
+  resources :restaurants, path: "/"
   resources :brands
   get "favorites/create"
 
@@ -39,6 +39,6 @@ Rails.application.routes.draw do
   resources :favorites, only: %i[index create destroy], param: :product_id
   resources :users, only: :show, path: "/user", param: :username
   resources :categories, except: :show
-  resources :products, path: "/"
+  resources :products
   root "restaurants#index"
 end
