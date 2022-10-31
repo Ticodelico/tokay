@@ -9,6 +9,7 @@ class RestaurantsController < ApplicationController
 
   # GET /restaurants/1 or /restaurants/1.json
   def show
+    puts @restaurant.suscription.quantity
   end
 
   # GET /restaurants/new

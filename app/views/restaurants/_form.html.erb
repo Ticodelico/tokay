@@ -44,7 +44,8 @@
                                <%= form.label :web_site %>
                                 <%= form.text_field :web_site, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
                             </div>
-                             <%= form.button%>
+                             <%= form.button 'Guardar', class: "bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded inline-flex items-center" %>
+                               <%= link_to 'Volver', restaurant_path(@restaurant), class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
                         </div>            
                      </div>    
                 </div> 

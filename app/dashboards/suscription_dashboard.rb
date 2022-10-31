@@ -12,6 +12,7 @@ class SuscriptionDashboard < Administrate::BaseDashboard
     limit: Field::Number,
     name: Field::Select.with_options(searchable: false, collection: ->(field) { field.resource.class.send(field.attribute.to_s.pluralize).keys }),
     price: Field::String,
+    quantity: Field::Number,
     restaurants: Field::HasMany,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -36,6 +37,7 @@ class SuscriptionDashboard < Administrate::BaseDashboard
     limit
     name
     price
+    quantity
     restaurants
     created_at
     updated_at
@@ -48,6 +50,7 @@ class SuscriptionDashboard < Administrate::BaseDashboard
     limit
     name
     price
+    quantity
     restaurants
   ].freeze
 
