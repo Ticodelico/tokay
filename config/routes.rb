@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
   resources :suscriptions
   resources :menus
-  resources :restaurants, path: "/"
+  resources :restaurants
   resources :brands
   get "favorites/create"
 
@@ -40,5 +40,9 @@ Rails.application.routes.draw do
   resources :users, only: :show, path: "/user", param: :username
   resources :categories, except: :show
   resources :products
-  root "restaurants#index"
+  root "pages#index"
+
+  PagesController.action_methods.each do |action|
+    get "/#{action}", to: "pages##{action}", as: "#{action}_page"
+  end
 end

@@ -11,6 +11,8 @@ class PagesController < ApplicationController
   end
 
   def home
+    @pagy, @restaurants =
+      pagy_countless(FindRestaurants.new.call(params), items: 12)
   end
 
   def blog

@@ -5,19 +5,23 @@ class Authentication::SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by("email = :login OR username = :login", { login: params[:login] })
+    @user =
+      User.find_by(
+        "email = :login OR username = :login",
+        { login: params[:login] }
+      )
 
     if @user&.authenticate(params[:password])
       session[:user_id] = @user.id
-      redirect_to products_path, notice: t('.created')
+      redirect_to home_page_path, notice: t(".created")
     else
-      redirect_to new_session_path, alert: t('.failed')
+      redirect_to new_session_path, alert: t(".failed")
     end
   end
 
   def destroy
     session.delete(:user_id)
 
-    redirect_to products_path, notice: t('.destroyed')
+    redirect_to index_page_path, notice: t(".destroyed")
   end
 end

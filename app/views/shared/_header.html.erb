@@ -12,11 +12,8 @@
  bg-gradient-to-r from-indigo-500 via-indigo-700 to-purple-900 
         "
       >
-       <div> 
-        <%= link_to root_path do %>
-   <%= image_tag "tokay.png", class: "logo" %>
-<% end %>
-        </div>
+   
+      <%= render partial: 'shared/logo'%>
 
        
        <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">

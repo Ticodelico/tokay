@@ -1,4 +1,11 @@
-<div>
-  <h1 class="font-bold text-4xl">Pages#home</h1>
-  <p>Find me in app/views/pages/home.html.erb</p>
-</div>
+  <%= turbo_frame_tag :restaurants do %>
+      <%= turbo_frame_tag "restaurants-#{@pagy.page}", class: 'restaurants' do %>
+      <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-5 ">
+      <%= render partial: 'restaurants/restaurant', collection: @restaurants %>
+      </div>
+      <% if @pagy.next %>
+      <% end %>
+      <%= turbo_frame_tag "restaurants-#{@pagy.next}", class: 'restaurants', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
+    <% end %>
+<% end %>
+
