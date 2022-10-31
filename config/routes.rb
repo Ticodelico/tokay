@@ -40,8 +40,11 @@ Rails.application.routes.draw do
   resources :users, only: :show, path: "/user", param: :username
   resources :categories, except: :show
   resources :products
-  root "pages#index"
-
+  if Current.user
+    root "pages#home"
+  else
+    root "pages#index"
+  end
   PagesController.action_methods.each do |action|
     get "/#{action}", to: "pages##{action}", as: "#{action}_page"
   end
